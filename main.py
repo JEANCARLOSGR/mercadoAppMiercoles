@@ -18,11 +18,10 @@ while opcion != 5:
     opcion=int(input("Digita una opcion del menu: "))
 
     if opcion == 1:
-        print ("Creando la lista ")
-        #Poblando lista y diccionarios en python
-
+       
+        #Poblando lista y diccionarios en python}
         #asignando claves a un diccionario 
-        producto["id"]=5
+        producto["id"]=5 #general de fotrma aletoria este numero (unico)
         producto["nombre"]=input("Digita el nombre del producto:")
         producto["presentacion"]=input("Digita la presenatcion del producto: ")
         producto["cantidad"]=int(input("Digita la cantidad:"))
@@ -31,13 +30,28 @@ while opcion != 5:
         #asignando una lista a un diccionario 
         productos.append(producto)
         
-        print(productos)
+       
         
 
     elif opcion == 2:
-        print ("Mostrado la lista ")
+        #Recorrer una lista
+        for  productoIterado in  productos:
+            print(productoIterado["nombre"])
+            print(productoIterado["precio"])
+            
+
     elif opcion == 3:
-        print ("Modificando la lista ")
+       #preguntarle al usuario cual producto quiere comprar 
+       IdProductoABuscar=int(input("cual es el Id de producto a modificar"))
+       #recorrer la lista para buscar el eleumento que quiero modificar 
+       for productoBuscado in productos:
+           if IdProductoABuscar==productoBuscado["id"]:
+               print("encontrado")
+            else:
+               print("no enc0o0ntrado") 
+                  
+       #modicicar la o las propiedades pedidas 
+
     elif opcion == 4:
         print ("Retirando un producto  ")
     else:
